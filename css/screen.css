@@ -161,11 +161,89 @@ a:focus {
   #OBJECTS
 \*------------------------------------*/
 
+
 /*
     Object: Object name
     ---
     Object description
 */
+.o-row {
+    padding: 24px 24px 0;
+    display: flow-root;
+}
+
+.o-row--primary {
+    background-color: #e85e00;
+    color: white;
+}
+
+.o-row--dark {
+    background-color: #000;
+    color: white;
+}
+
+.o-container {
+    max-width: 90em;
+    margin: 0 auto;
+}
+
+.o-layout {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.o-layout__item {
+    flex-basis: 100%;
+}
+.o-layout--gutter{
+    margin:0 -12px;
+    justify-content: flex-start;
+}
+
+.o-layout--gutter > .o-layout__item {
+    padding:0 12px;
+}
+
+.o-layout--gutter-sm {
+    margin:0 -6px;
+}
+
+.o-layout--gutter-sm > .o-layout__item {
+    padding:0 6px;
+}
+
+.o-layout--gutter-lg {
+    margin:0 -24px;
+}
+
+.o-layout--gutter-lg > .o-layout__item {
+    padding:0 24px;
+}
+.o-layout--justify-center{
+    justify-content: center;
+}
+.o-layout--justify-end{
+    justify-content: flex-end;
+}
+.o-layout--justify-space-around{
+    justify-content: space-evenly;
+}.o-layout--justify-space-between{
+    justify-content: space-between;
+}
+.o-layout--row-reverse{
+    display: flex;
+    /*flex-direction: row-reverse;*/
+}
+@media (min-width: 768px) {
+    .o-row--lg {
+        padding:48px 48px 0
+    }
+}
+
+
+
 
 /*------------------------------------*\
   #COMPONENTS
@@ -176,6 +254,19 @@ a:focus {
     ---
     Component description
 */
+.c-layout-block {
+    background-color: LightGrey;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.c-layout-block--ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 
 /*------------------------------------*\
   #UTILITIES
@@ -186,10 +277,261 @@ a:focus {
     ---
     Utility classes to put specific max widths onto elements.
 */
-
 .u-max-width-sm {
-    max-width: 36em;
+    max-width: 36em !important;
 }
+
+.u-max-width-md {
+    max-width: 45em;
+}
+
+.u-max-width-lg {
+    max-width: 60em;
+}
+
+.u-max-width-xl {
+    max-width: 75em;
+}
+
+.u-max-width-none {
+    max-width: none;
+}
+
+.u-flex-basis-auto {
+    flex-basis: auto !important;
+}
+.u-flex-grow-1{
+    flex-grow: 1 !important;
+}
+
+.u-1-of-2 {
+    flex-basis:calc(100%/2) !important;
+}
+
+.u-1-of-3 {
+    flex-basis:calc(100%/3) !important;
+}
+
+.u-2-of-3 {
+    flex-basis:calc(100%/3*2) !important;
+}
+
+.u-1-of-4 {
+    flex-basis:calc(100%/4) !important;
+}
+
+.u-3-of-4 {
+    flex-basis:calc(100%/4*3) !important;
+}
+
+.u-1-of-5 {
+    flex-basis:calc(100%/5) !important;
+}
+
+.u-2-of-5 {
+    flex-basis:calc(100%/5*2) !important;
+}
+
+.u-3-of-5 {
+    flex-basis:calc(100%/5*3) !important;
+}
+
+.u-4-of-5 {
+    flex-basis:calc(100%/5*4) !important;
+}
+
+.u-1-of-6 {
+    flex-basis:calc(100%/6) !important;
+}
+
+.u-5-of-6 {
+    flex-basis:calc(100%/6*5) !important;
+}
+
+@media (min-width: 576px) {
+    .u-1-of-2-bp1 {
+        flex-basis:calc(100%/2) !important;
+    }
+    
+    .u-1-of-3-bp1 {
+        flex-basis:calc(100%/3) !important;
+    }
+    
+    .u-2-of-3-bp1 {
+        flex-basis:calc(100%/3*2) !important;
+    }
+    
+    .u-1-of-4-bp1 {
+        flex-basis:calc(100%/4) !important;
+    }
+    
+    .u-3-of-4-bp1 {
+        flex-basis:calc(100%/4*3) !important;
+    }
+    
+    .u-1-of-5-bp1 {
+        flex-basis:calc(100%/5) !important;
+    }
+    
+    .u-2-of-5-bp1 {
+        flex-basis:calc(100%/5*2) !important;
+    }
+    
+    .u-3-of-5-bp1 {
+        flex-basis:calc(100%/5*3) !important;
+    }
+    
+    .u-4-of-5-bp1 {
+        flex-basis:calc(100%/5*4) !important;
+    }
+    
+    .u-1-of-6-bp1 {
+        flex-basis:calc(100%/6) !important;
+    }
+    
+    .u-5-of-6-bp1 {
+        flex-basis:calc(100%/6*5) !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .u-1-of-2-bp2 {
+        flex-basis:calc(100%/2) !important;
+    }
+    
+    .u-1-of-3-bp2 {
+        flex-basis:calc(100%/3) !important;
+    }
+    
+    .u-2-of-3-bp2 {
+        flex-basis:calc(100%/3*2) !important;
+    }
+    
+    .u-1-of-4-bp2 {
+        flex-basis:calc(100%/4) !important;
+    }
+    
+    .u-3-of-4-bp2 {
+        flex-basis:calc(100%/4*3) !important;
+    }
+    
+    .u-1-of-5-bp2 {
+        flex-basis:calc(100%/5) !important;
+    }
+    
+    .u-2-of-5-bp2 {
+        flex-basis:calc(100%/5*2) !important;
+    }
+    
+    .u-3-of-5-bp2 {
+        flex-basis:calc(100%/5*3) !important;
+    }
+    
+    .u-4-of-5-bp2 {
+        flex-basis:calc(100%/5*4) !important;
+    }
+    
+    .u-1-of-6-bp2 {
+        flex-basis:calc(100%/6) !important;
+    }
+    
+    .u-5-of-6-bp2 {
+        flex-basis:calc(100%/6*5) !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .u-1-of-2-bp3 {
+        flex-basis:calc(100%/2) !important;
+    }
+    
+    .u-1-of-3-bp3 {
+        flex-basis:calc(100%/3) !important;
+    }
+    
+    .u-2-of-3-bp3 {
+        flex-basis:calc(100%/3*2) !important;
+    }
+    
+    .u-1-of-4-bp3 {
+        flex-basis:calc(100%/4) !important;
+    }
+    
+    .u-3-of-4-bp3 {
+        flex-basis:calc(100%/4*3) !important;
+    }
+    
+    .u-1-of-5-bp3 {
+        flex-basis:calc(100%/5) !important;
+    }
+    
+    .u-2-of-5-bp3 {
+        flex-basis:calc(100%/5*2) !important;
+    }
+    
+    .u-3-of-5-bp3 {
+        flex-basis:calc(100%/5*3) !important;
+    }
+    
+    .u-4-of-5-bp3 {
+        flex-basis:calc(100%/5*4) !important;
+    }
+    
+    .u-1-of-6-bp3 {
+        flex-basis:calc(100%/6) !important;
+    }
+    
+    .u-5-of-6-bp3 {
+        flex-basis:calc(100%/6*5) !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .u-1-of-2-bp4 {
+        flex-basis:calc(100%/2) !important;
+    }
+    
+    .u-1-of-3-bp4 {
+        flex-basis:calc(100%/3) !important;
+    }
+    
+    .u-2-of-3-bp4 {
+        flex-basis:calc(100%/3*2) !important;
+    }
+    
+    .u-1-of-4-bp4 {
+        flex-basis:calc(100%/4) !important;
+    }
+    
+    .u-3-of-4-bp4 {
+        flex-basis:calc(100%/4*3) !important;
+    }
+    
+    .u-1-of-5-bp4 {
+        flex-basis:calc(100%/5) !important;
+    }
+    
+    .u-2-of-5-bp4 {
+        flex-basis:calc(100%/5*2) !important;
+    }
+    
+    .u-3-of-5-bp4 {
+        flex-basis:calc(100%/5*3) !important;
+    }
+    
+    .u-4-of-5-bp4 {
+        flex-basis:calc(100%/5*4) !important;
+    }
+    
+    .u-1-of-6-bp4 {
+        flex-basis:calc(100%/6) !important;
+    }
+    
+    .u-5-of-6-bp4 {
+        flex-basis:calc(100%/6*5) !important;
+    }
+}
+
 
 /*
     Utility: Utility name
